@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logoutDiv{
+    padding: 10px;
+    text-align: right;
+    align-items: right;
+    justify-content: right;
+}
+
+.logoutButton{
+    background-color: #4CAF50;
+    font: weight 400px;;
+    font-style: italic;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.logoutButton button:hover{
+    background-color: #45a049
+}
+
+.titleText{
+    color: rgb(255, 200, 0);
+    text-shadow: 2px 2px 2px black;
+}
+
+form{
+    padding: 30px;
+    text-align: center;
+}
+
+select{
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 20px;
+    width: 20%;
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+
+table{
+    margin: auto;
+    width: 60%;
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+    overflow-y: auto;
+    height: 80%;
+}
+th{
+    border:2px solid;
+    padding: 6px;
+    font-size: 22px;
+}
+
+td{
+    border: 2px solid;
+    padding: 6px;
+    font-size: 14px;
+}
+
+
+
+

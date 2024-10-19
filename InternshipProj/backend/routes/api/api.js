@@ -7,9 +7,10 @@ const mysql = require('mysql2');
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '1234',
     database: 'localdatabase',
-    port: 3306
+    port: 3306,
+    waitForConnections: true,
+    connectionLimit: 20,
 });
 // Connect to a database
 db.connect((err) =>{
@@ -18,6 +19,24 @@ db.connect((err) =>{
         return;
     }
     console.log('Connected to MySQL')
+    const createQuery = `CREATE TABLE IF NOT EXISTS userinfo (
+        firstname VARCHAR(45) NOT NULL,
+        lastname VARCHAR(45) NOT NULL,
+        address VARCHAR(120) NOT NULL,
+        subdistrict VARCHAR(40) NOT NULL,
+        area VARCHAR(40) NOT NULL,
+        province VARCHAR(40) NOT NULL,
+        postcode VARCHAR(6) NOT NULL,
+        phonenum VARCHAR(12),
+        teamchamp VARCHAR(10) NOT NULL
+    )`
+    db.query(createQuery, (err, results) => {
+        if(err){
+            res.status(400).json({msg: "Database error. Cannot query"});
+            console.log(err);
+        }
+        console.log("Table is created.")
+    })
 });
 
 // Get All user
@@ -35,7 +54,7 @@ rounter.get("/admin", (req, res) => {
 })
 
 // Sign up for user
-rounter.post("/register", (req, res) => {
+rounter.post("/userRegister", (req, res) => {
     const newUser = {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
