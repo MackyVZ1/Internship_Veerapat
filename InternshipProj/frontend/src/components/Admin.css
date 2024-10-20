@@ -63,7 +63,8 @@ table{
     height: 80%;
 }
 th{
-    border:2px solid;
+    color: white;
+    background-color: black;
     padding: 6px;
     font-size: 22px;
 }
