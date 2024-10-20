@@ -18,7 +18,6 @@ body {
 
 .title {
     text-align: right;
-    margin-bottom: 20px;
 }
 
 .adminButton {
@@ -61,7 +60,9 @@ body {
 }
 
 .loginform {
-    display:grid;
+    width: 30%;
+    margin: auto;
+    display:flexbox;
     gap: 10px;
     justify-content: center;
     text-align: center;

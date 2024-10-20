@@ -32,7 +32,6 @@ db.connect((err) =>{
     )`
     db.query(createQuery, (err, results) => {
         if(err){
-            res.status(400).json({msg: "Database error. Cannot query"});
             console.log(err);
         }
         console.log("Table is created.")

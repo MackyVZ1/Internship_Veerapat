@@ -88,6 +88,7 @@ const LoginPage = () => {
 
     // กด login ของ admin
     const handleAdminLogin = () => {
+        // เช็คเงื่อนไข username / password
         if (adminUsername === "admin" && adminPassword === "1234")
             console.log('Admin Login:', { adminUsername, adminPassword });
             setShowAdminPopup(false); // ปิดป็อปอัพ
